@@ -1,0 +1,6 @@
+*.* #Hasta que haya más BBDD... oculto todo
+#chistes
+chistes*
+jokeDB.db
+#quotes
+quote*
