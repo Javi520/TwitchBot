@@ -30,18 +30,26 @@ namespace TwitchBot
         List<String> mods = null;
         List<String> vips = null;
 
-        public List<String> GetChannelModerators()
+        public List<String> GetMods()
         {
             return mods;
         }
 
-        public List<String> GetChannelVips()
+        public List<String> GetVips()
         {
             return vips;
         }
 
+        // Asks Twitch for a list containing mods of a channel. When Twitch answers back... we were susbcribed to the event and list is received
+        public void SyncMods(TwitchClient twitchClient, string channel)
+        {
+            twitchClient.GetChannelModerators(channel);
+        }
 
+        public void SyncVips(TwitchClient twitchClient)
+        {
 
+        }
     }
 
     class Fraserio
